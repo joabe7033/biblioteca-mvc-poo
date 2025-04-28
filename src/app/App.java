@@ -35,12 +35,11 @@
          scanner.close();
      }
  
-     // Método que lê um número inteiro válido do usuário
      private static int lerInteiroValido(Scanner scanner) {
          while (true) {
              try {
                  int valor = Integer.parseInt(scanner.nextLine());
-                 if (valor >= 0) {  // Aqui validamos se é um número válido e positivo
+                 if (valor >= 0) {
                      return valor;
                  } else {
                      System.out.println("⚠ O número deve ser positivo.");

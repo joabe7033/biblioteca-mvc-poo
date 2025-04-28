@@ -8,7 +8,12 @@ public class Usuario extends Pessoa {
         super(nome, telefone, endereco, email);
         this.id = contador++;
     }
- 
+
+    public Usuario(String nome, String email) {
+        super(nome, "", "", email);
+        this.id = contador++;
+    }
+
     public int getId() {
         return id;
     }

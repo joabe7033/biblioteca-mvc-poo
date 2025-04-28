@@ -2,6 +2,7 @@ package model;
 
 public class Livro {
 
+    private static int contador = 1;
     private int id;
     private String titulo;
     private String autor;
@@ -10,12 +11,21 @@ public class Livro {
     private String categoria;
 
     public Livro(String titulo, String autor, int anoPublicacao, int exemplares, String categoria) {
-        this.id = 0; // O ID será gerado automaticamente
+        this.id = contador++;
         this.titulo = titulo;
         this.autor = autor;
         this.anoPublicacao = anoPublicacao;
         this.exemplares = exemplares;
         this.categoria = categoria;
+    }
+
+    public Livro(String titulo, String autor, int exemplares) {
+        this.id = contador++;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.anoPublicacao = 2024;
+        this.exemplares = exemplares;
+        this.categoria = "Não categorizado";
     }
 
     public int getId() {
@@ -44,6 +54,14 @@ public class Livro {
 
     public String getCategoria() {
         return categoria;
+    }
+
+    public int getExemplaresDisponiveis() {
+        return exemplares;
+    }
+
+    public void setExemplaresDisponiveis(int exemplaresDisponiveis) {
+        this.exemplares = exemplaresDisponiveis;
     }
 
     @Override

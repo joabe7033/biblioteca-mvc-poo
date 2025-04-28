@@ -55,4 +55,8 @@ public class LivroController implements ILivroRepository {
     public List<Livro> getTodosLivros() {
         return livros;
     }
+
+    public void adicionarLivro(Livro livro) {
+        cadastrarLivro(livro);
+    }
 }

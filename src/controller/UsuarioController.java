@@ -17,4 +17,17 @@ public class UsuarioController implements IUsuarioRepository {
     public List<Usuario> listarUsuarios() {
         return usuarios;
     }
+
+    public Usuario buscarUsuarioPorId(int id) {
+        for (Usuario usuario : usuarios) {
+            if (usuario.getId() == id) {
+                return usuario;
+            }
+        }
+        return null;
+    }
+
+    public void adicionarUsuario(Usuario usuario) {
+        cadastrarUsuario(usuario);
+    }
 }
