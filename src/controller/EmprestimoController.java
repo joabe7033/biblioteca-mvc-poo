@@ -83,12 +83,10 @@ public class EmprestimoController {
         return emprestimosComAtraso;
     }
 
-    // Método para o PreCargaDados adicionar empréstimos direto
     public void adicionarEmprestimo(Emprestimo emprestimo) {
         emprestimos.add(emprestimo);
     }
 
-    // ✅ Método novo para forçar atraso em teste
     public void forcarAtrasoParaTeste(Usuario usuario, Livro livro, LocalDate novaDataPrevistaDevolucao) {
         for (Emprestimo e : emprestimos) {
             if (e.getUsuario().equals(usuario) && e.getLivro().equals(livro) && e.isAtivo()) {

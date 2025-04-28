@@ -30,4 +30,13 @@ public class UsuarioController implements IUsuarioRepository {
     public void adicionarUsuario(Usuario usuario) {
         cadastrarUsuario(usuario);
     }
+
+    public Usuario buscarPorNome(String nome) {
+        for (Usuario u : usuarios) {
+            if (u.getNome().equalsIgnoreCase(nome)) {
+                return u;
+            }
+        }
+        return null;
+    }
 }

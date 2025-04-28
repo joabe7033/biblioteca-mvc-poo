@@ -14,7 +14,7 @@ public class EmprestimoView {
     private EmprestimoController emprestimoController = new EmprestimoController();
     private LivroController livroController = new LivroController();
     private UsuarioController usuarioController = new UsuarioController();
-    private RelatorioController relatorioController = new RelatorioController(emprestimoController); // Adicionado aqui
+    private RelatorioController relatorioController = new RelatorioController(emprestimoController); 
 
     public void exibirMenu() {
         int opcao;
@@ -25,7 +25,7 @@ public class EmprestimoView {
             System.out.println("2. Listar empréstimos");
             System.out.println("3. Devolver livro");
             System.out.println("4. Listar empréstimos com atraso");
-            System.out.println("5. Gerar relatórios"); // Nova opção
+            System.out.println("5. Gerar relatórios");
             System.out.println("0. Voltar");
             System.out.print("Opção: ");
             opcao = lerInteiro();
@@ -35,7 +35,7 @@ public class EmprestimoView {
                 case 2 -> emprestimoController.listarEmprestimos();
                 case 3 -> devolverLivro();
                 case 4 -> listarAtrasos();
-                case 5 -> gerarRelatorios(); // Chamando novo método
+                case 5 -> gerarRelatorios();
                 case 0 -> System.out.println("Voltando...");
                 default -> System.out.println("Opção inválida.");
             }
