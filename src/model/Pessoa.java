@@ -9,7 +9,7 @@ public abstract class Pessoa {
     public Pessoa(String nome, String telefone, String endereco, String email) {
         this.nome = nome;
         this.telefone = telefone;
-        this.endereco = endereco;
+        this.endereco = endereco; 
         this.email = email;
     }
 
